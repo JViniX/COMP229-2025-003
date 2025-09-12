@@ -17,8 +17,26 @@ class Car extends Vehicle {
   }
 }
 
+let motorcycle = new Vehicle(2);
+console.log(motorcycle.toString());
+
 let car = new Car('blue');
 console.log(car.toString());
 
 console.log(car instanceof Car);
 console.log(car instanceof Vehicle);
+console.log(typeof car);
+
+let item = "true";
+console.log(typeof item);
+
+item = true;
+console.log(typeof item);
+
+item = 10;
+let item2 = "10"
+console.log(typeof item);
+console.log(typeof item2);
+
+let result = item === item2;
+console.log(result);
