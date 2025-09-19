@@ -2,32 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import DemoComponent from './DemoComponent'
+import IngredientsList from './IngredientsList'
+
+const itemsList = [
+    "1 cup unsalted butter",
+    "1 cup crunchy peanut butter",
+    "1 cup brown sugar",
+    "1 cup white sugar",
+    "2 eggs",
+    "2.5 cups all purpose flour",
+    "1 teaspoon baking powder",
+    "0.5 teaspoon salt"
+];
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <IngredientsList items={itemsList}/>
+      <DemoComponent />
     </>
   )
 }
