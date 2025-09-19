@@ -9,10 +9,6 @@ import Services from './components/Services.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    <Home />
-    <About />
-    <Projects />
-    <Services />
+    <App />
   </StrictMode>,
 )
