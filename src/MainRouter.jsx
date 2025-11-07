@@ -5,6 +5,7 @@ import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Layout from "./components/Layout";
 import Services from "./components/Services";
+import ListInventory from "./components/inventory/ListInventory";
 
 function MainRouter() {
     return (
@@ -15,6 +16,7 @@ function MainRouter() {
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/inventorylist" element={<ListInventory />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </div>
