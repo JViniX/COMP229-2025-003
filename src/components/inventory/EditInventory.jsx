@@ -1,13 +1,38 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import InventoryModel from "../../datasource/inventoryModel";
-import { create } from "../../datasource/api-inventory";
+import { update, read } from "../../datasource/api-inventory";
 import InventoryForm from "./InventoryForm";
 
-const AddInventory = () => {
+const EditInventory = () => {
     const navigate = useNavigate();
+    const { id } = useParams();
     const [product, setProduct] = useState(new InventoryModel());
     const [errorMsg, setErrorMsg] = useState('')
+
+    // When the component loads.
+    useEffect(() => {
+        read(id).then(data => {
+            if (data) {
+                setProduct(new InventoryModel(
+                    data.id,
+                    data.item,
+                    data.qty,
+                    data.tags,
+                    data.status,
+                    data.size.h,
+                    data.size.w,
+                    data.size.uom
+                ));
+            } else {
+                setErrorMsg(data.message);
+            }
+
+        }).catch(err => {
+            setErrorMsg(err.message);
+            console.log(err);
+        });
+    }, [id, navigate]);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -30,10 +55,10 @@ const AddInventory = () => {
             }
         };
 
-        create(submitProduct)
+        update(submitProduct, id)
             .then(data => {
-                if (data && data.id) {
-                    alert(`Item added with the id ${data.id}`);
+                if (data && data.success) {
+                    alert(data.message);
                     navigate("/inventory/list");
                 } else {
                     setErrorMsg(data.message);
@@ -50,7 +75,7 @@ const AddInventory = () => {
         <div className="container" style={{ paddingTop: 10 }}>
             <div className="row">
                 <div className="offset-md-3 col-md-6">
-                    <h1>Add Inventory Item</h1>
+                    <h1>Edit Inventory Item</h1>
                     <p className="flash"><span>{errorMsg}</span></p>
                     <InventoryForm
                         product={product}
@@ -63,4 +88,4 @@ const AddInventory = () => {
     );
 }
 
-export default AddInventory;
+export default EditInventory;
