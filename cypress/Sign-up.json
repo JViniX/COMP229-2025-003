@@ -1,0 +1,289 @@
+{
+    "title": "Sign-up",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1007,
+            "height": 945,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "Vite + React"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/ Signin"
+                ],
+                [
+                    "a:nth-of-type(7)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/a[7]"
+                ],
+                [
+                    "pierce/a:nth-of-type(7)"
+                ],
+                [
+                    "text/Signin"
+                ]
+            ],
+            "offsetY": 15.46875,
+            "offsetX": 35.171875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/ Sign-up"
+                ],
+                [
+                    "#root > div > div a"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/a"
+                ],
+                [
+                    "pierce/#root > div > div a"
+                ],
+                [
+                    "text/Sign-up"
+                ]
+            ],
+            "offsetY": 15.9375,
+            "offsetX": 214.25
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/First Name"
+                ],
+                [
+                    "#firstNameTextField"
+                ],
+                [
+                    "xpath///*[@id=\"firstNameTextField\"]"
+                ],
+                [
+                    "pierce/#firstNameTextField"
+                ]
+            ],
+            "offsetY": 27.9375,
+            "offsetX": 266.25
+        },
+        {
+            "type": "change",
+            "value": "Johnny",
+            "selectors": [
+                [
+                    "aria/First Name"
+                ],
+                [
+                    "#firstNameTextField"
+                ],
+                [
+                    "xpath///*[@id=\"firstNameTextField\"]"
+                ],
+                [
+                    "pierce/#firstNameTextField"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Last Name"
+                ],
+                [
+                    "#lastNameTextField"
+                ],
+                [
+                    "xpath///*[@id=\"lastNameTextField\"]"
+                ],
+                [
+                    "pierce/#lastNameTextField"
+                ]
+            ],
+            "offsetY": 17.9375,
+            "offsetX": 150.25
+        },
+        {
+            "type": "change",
+            "value": "Smith",
+            "selectors": [
+                [
+                    "aria/Last Name"
+                ],
+                [
+                    "#lastNameTextField"
+                ],
+                [
+                    "xpath///*[@id=\"lastNameTextField\"]"
+                ],
+                [
+                    "pierce/#lastNameTextField"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Email"
+                ],
+                [
+                    "#emailTextField"
+                ],
+                [
+                    "xpath///*[@id=\"emailTextField\"]"
+                ],
+                [
+                    "pierce/#emailTextField"
+                ]
+            ],
+            "offsetY": 25.9375,
+            "offsetX": 112.25
+        },
+        {
+            "type": "change",
+            "value": "johnny@smith.com",
+            "selectors": [
+                [
+                    "aria/Email"
+                ],
+                [
+                    "#emailTextField"
+                ],
+                [
+                    "xpath///*[@id=\"emailTextField\"]"
+                ],
+                [
+                    "pierce/#emailTextField"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#passwordTextField"
+                ],
+                [
+                    "xpath///*[@id=\"passwordTextField\"]"
+                ],
+                [
+                    "pierce/#passwordTextField"
+                ]
+            ],
+            "offsetY": 22.9375,
+            "offsetX": 125.25
+        },
+        {
+            "type": "change",
+            "value": "123456",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#passwordTextField"
+                ],
+                [
+                    "xpath///*[@id=\"passwordTextField\"]"
+                ],
+                [
+                    "pierce/#passwordTextField"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Confirm Password"
+                ],
+                [
+                    "#confirmPasswordTextField"
+                ],
+                [
+                    "xpath///*[@id=\"confirmPasswordTextField\"]"
+                ],
+                [
+                    "pierce/#confirmPasswordTextField"
+                ]
+            ],
+            "offsetY": 27.9375,
+            "offsetX": 99.25
+        },
+        {
+            "type": "change",
+            "value": "123456",
+            "selectors": [
+                [
+                    "aria/Confirm Password"
+                ],
+                [
+                    "#confirmPasswordTextField"
+                ],
+                [
+                    "xpath///*[@id=\"confirmPasswordTextField\"]"
+                ],
+                [
+                    "pierce/#confirmPasswordTextField"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Submit"
+                ],
+                [
+                    "button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/button"
+                ],
+                [
+                    "pierce/button"
+                ],
+                [
+                    "text/Submit"
+                ]
+            ],
+            "offsetY": 15.9375,
+            "offsetX": 206.25
+        }
+    ]
+}
